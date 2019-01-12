@@ -1,0 +1,43 @@
+{
+  "name": "notesjs",
+  "version": "0.0.0",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "cheerio": "^0.19.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.3",
+    "hbs": "~4.0.1",
+    "html": "^1.0.0",
+    "http-errors": "~1.7.0",
+    "jasmine-node": "^1.16.2",
+    "js-beautify": "1.8.4",
+    "min-dash": "^3.2.0",
+    "mongoose": "^5.2.12",
+    "morgan": "~1.9.0",
+    "node-cache": "4.2.0",
+    "request": "^2.65.0",
+    "url-parse": "^1.0.5"
+  },
+  "devDependencies": {
+    "debug": "^3.1.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "cpx": "^1.5.0",
+    "eslint": "^5.6.1",
+    "eslint-plugin-bpmn-io": "^0.6.0",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.1",
+    "rollup": "^0.66.5",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-uglify": "^6.0.0",
+    "sinon": "^6.3.5",
+    "sinon-chai": "^3.2.0",
+    "source-map-support": "^0.5.0"
+  },
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js"
+}
