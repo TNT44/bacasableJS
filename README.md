@@ -1,2 +1,2 @@
 # bacasableJS
-bacasableJS  - du Javascript avant ES6
+bacasableJS  - Javascript avant ES6
