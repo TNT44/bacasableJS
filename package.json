@@ -6,7 +6,6 @@
     "body-parser": "1.18.3",
     "cheerio": "^0.19.0",
     "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
     "express": "~4.16.3",
     "file-saver": "^2.0.2",
     "form-data": "^3.0.0",
@@ -24,12 +23,12 @@
     "url-parse": "^1.0.5"
   },
   "devDependencies": {
-    "debug": "^3.1.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "cpx": "^1.5.0",
+    "debug": "^3.1.0",
     "eslint": "^5.6.1",
     "eslint-plugin-bpmn-io": "^0.6.0",
     "mocha": "^5.2.0",
