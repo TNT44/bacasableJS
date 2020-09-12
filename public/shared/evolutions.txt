@@ -1,0 +1,41 @@
+// nouvelle application Remember
+// 06/03/2015
+//derive de gestion droit
+
+Droits utilisateurs
+
+* app.controleurs
+UnDroits
+UneZones
+UnRoles
+Users
+Zone
+ZoneAdmin
+ZoneAutorizes
+
+* app.models
+Dzone
+UnDroit
+UneZone
+UnRole
+User
+Zoneautorize
+
+* app.views
+Zone/index.html --> teste les zones
+ZoneAdmin/afficherdroits.html --> set les droits sur les divers zones
+admin.html --> ecran encapsulation des droits
+
+* les routes
+GET		/zoneadmin								ZoneAdmin.afficherdroits
+GET		/zoneadmin/change						ZoneAdmin.change
+GET		/zoneadmin/{<[0-9]+>zaid}/effacer		ZoneAdmin.effacer
+POST	/zoneadmin								ZoneAdmin.creer
+GET     /zone/                                  Zone.index
+
+05/02/2012
+Administration, et gestion des droits utilisateurs.
+Correction sur la gestion de select.
+
+07/03/2015
+Cherche a modifier le login

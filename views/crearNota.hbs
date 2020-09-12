@@ -1,0 +1,12 @@
+<div class="container" align="center">
+    <h1>Crear Nota</h1>
+    <form action="/crearNota/nota/operar" method="post">
+        <input type="hidden" name="_id" value="{{nota._id}}"/>
+        <label for="nombre">Título de la nota</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Titulo" value="{{nota.nombre}}"><br><br>
+        <label for="contenido">Descripcion</label><br>
+        <textarea name="contenido" id="contenido" cols="60" rows="15" placeholder="Contenido">{{nota.contenido}}</textarea><br>
+        <button type="submit" class="btn btn-success">Aceptar</button>
+        <a href="/" class="btn btn-danger">Cancelar</a>
+    </form>
+</div>

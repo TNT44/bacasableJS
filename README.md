@@ -28,4 +28,4 @@ Pour executer les exemples .
 >node XXXX.js
 
 Pour executer Jasmine
->
+>jasmine-node spec --autotest --watch .

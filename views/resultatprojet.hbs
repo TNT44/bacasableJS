@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Détail d'un projet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GetWeb JS">
+    <meta name="author" content="Duarte TERENCIO">
+    <link rel="shortcut icon" href="http://localhost:9001/public/assets/ico/favicon.png">
+    <!-- Bootstrap core CSS -->
+    <link href="public/bootstrap337/css/bootstrap.min.css" rel="stylesheet" media="all">
+    <!-- Custom styles for this template -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="/public/assets/js/html5shiv.js"></script>          <script src="/public/assets/js/respond.min.js"></script>        <![endif]-->
+    <!-- autres extension -->
+    <script src="public/bootstrap337/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="public/bootstrap337/js/bootstrap.min.js" type="text/javascript"
+charset="utf-8"></script>
+  </head>
+  <body>
+    <link href="public/css/star_rating.css" rel="stylesheet" type="text/css" media="all">
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse">
+            <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+              class="icon-bar"></span>
+          </button> <a class="navbar-brand" href="http://localhost:9001/theme/"><b>GetWeb
+              JS</b></a> </div>
+        <script>
+            $(document).ready(function () {
+                $("#about").bind("click", function () {
+                    alert("GetWeb JS \n\n\n Duarte TERENCIO \n\n\n     Version 1.2.1");
+                });
+            });
+        </script> </div>
+    </div>
+    <div class="container">
+      <div>
+        <div>
+          <ul class="breadcrumb">
+            <li class="active"><a href="listeprojet.html">Projet</a></li>
+            <li class="active">Liste actualité bourso</li>
+          </ul>
+        </div>
+      </div>
+      <label for="desc">Page html : </label> <textarea cols="120" id="markdown"
+name="untheme.body"
+rows="20"
+class="">		</textarea>
+      <div><br>
+        <!-- debut du panel form -->
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form action="/unthemes/creer" method="post" accept-charset="utf-8"
+              enctype="application/x-www-form-urlencoded"
+              id="creationForm"><input
+                name="authenticityToken"
+                value="677f88dcaba770b6ad6a48c0cd13bf06c31157fc"
+                type="hidden">
+              <input name="untheme.template" value="true" type="hidden">
+              <div class="submit"> <input id="commit" name="commit" class="btn"
+value="Créer"
+type="submit"> ou <a href="creeetape.html">Créer un étape</a>
+              </div>
+            </form>
+           
+          </div>
+        </div>
+        <!-- fin du panel form --> </div>
+
+    </div>
+    <div>
+
+      <a href="">Revenir sur la vue HTML</a>  <a href="">Sauver le résultat</a><br>
+
+    </div>
+    <div class="container hidden-print">
+      <hr> <a href="http://localhost:9001/public/shared/evolutions.txt"> Les
+        évolutions </a> </div>
+  </body>
+</html>

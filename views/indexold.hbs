@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Notes JS</h1>
+    <a href="/nota/crear" class="btn btn-info">Crear</a>
+    <br><table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Contenido</th>
+                <th>Fecha</th>
+                <th colspan="2">Operación</th>
+            </tr>
+        </thead>
+        {{#each notas}}
+            <tr>
+                <td><a href="/nota/ver/{{this._id}}">{{this.nombre}}</a></td>
+                <td>{{this.contenido}}</td>
+                <td>{{this.fecha}}</td>
+                <td><a href="/nota/modificar/{{this._id}}">Modificar</a></td>
+                <td><a href="/nota/eliminar/{{this._id}}">Eliminar</a></td>
+            </tr>
+        {{/each}}
+    </table>
+</div>
+
+

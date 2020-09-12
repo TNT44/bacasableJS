@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Liste des projets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GetWeb JS">
+    <meta name="author" content="Duarte TERENCIO">
+    <link rel="shortcut icon" href="http://localhost:9001/public/assets/ico/favicon.png">
+    <!-- Bootstrap core CSS -->
+    <link href="public/bootstrap337/css/bootstrap.min.css" rel="stylesheet" media="all">
+    <!-- Custom styles for this template -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="/public/assets/js/html5shiv.js"></script>          <script src="/public/assets/js/respond.min.js"></script>        <![endif]-->
+    <!-- autres extension -->
+    <script src="public/bootstrap337/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="public/bootstrap337/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <link href="public/css/star_rating.css" rel="stylesheet" type="text/css" media="all">
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse">
+            <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+              class="icon-bar"></span>
+          </button> <a class="navbar-brand" href="http://localhost:9001/theme/"><b>GetWeb
+              JS</b></a> </div>
+        <!--
+        <div class="navbar-collapse collapse">            <ul class="nav navbar-nav">                                <li class="active">                                                            <a href="http://localhost:9001/theme/">Liste des themes</a>                </li>                                                     <li>
+                                        <a href="http://localhost:9001/unservices/lister">Service</a>                </li>                <li><a href="http://localhost:9001/admin/">Administration</a></li>                <li><a href="#" id="about">A propos</a></li>
+            </ul>                    </div>                  -->
+        <!--/.navbar-collapse -->
+        <script>
+            $(document).ready(function () {
+                $("#about").bind("click", function () {
+                    alert("GetWeb JS \n\n\n Duarte TERENCIO \n\n\n     Version 1.2.1");
+                });
+            });
+        </script> </div>
+    </div>
+    <div class="container">
+      <div>
+        <table>
+          <tbody>
+              {{#each listeprojet}}
+              <tr>
+                <td width="60px"><br>
+                </td>
+                <td width="800px"> <a href="projet/{{this.id}}">{{this.nom}}</a>
+                </td>
+                <td>
+                  <div>
+                    <ul class="star-rating">
+                      <li class="current-rating" style="width:0%;">Nous avons 0/5
+                        étoile(s).</li>
+                      <li><a href="http://localhost:9001/unthemes/vote?valeur=1&amp;unid=1"
+                          title="1 étoile sur 5"
+                          class="one-star">1</a></li>
+                      <li><a href="http://localhost:9001/unthemes/vote?valeur=2&amp;unid=1"
+                          title="2 étoiles sur 5"
+                          class="two-stars">2</a></li>
+                      <li><a href="http://localhost:9001/unthemes/vote?valeur=3&amp;unid=1"
+                          title="3 étoiles sur 5"
+                          class="three-stars">3</a></li>
+                      <li><a href="http://localhost:9001/unthemes/vote?valeur=4&amp;unid=1"
+                          title="4 étoiles sur 5"
+                          class="four-stars">4</a></li>
+                      <li><a href="http://localhost:9001/unthemes/vote?valeur=5&amp;unid=1"
+                          title="5 étoiles sur 5"
+                          class="five-stars">5</a></li>
+                    </ul>
+                  </div>
+                </td>
+                <td width="20px"><br>
+                </td>
+                <td> <a href="vueprojet.html">Modifier</a> </td>
+              </tr>
+                {{/each}}
+
+          </tbody>
+        </table>
+        <br>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>Creer un nouveau projet </h4>
+          </div>
+          <div class="panel-body">
+            <form action="/projet/create" method="post" accept-charset="utf-8"
+              enctype="application/x-www-form-urlencoded"
+              id="creationForm">
+
+              <input
+                name="authenticityToken"
+                value="677f88dcaba770b6ad6a48c0cd13bf06c31157fc"
+                type="hidden">
+
+              <input name="untheme.template" value="true" type="hidden">
+
+              <p class=""> <label for="desc">Un projet : </label>
+                <input id="desc"
+                  name="proj.nom"
+                  class=""
+                  size="100"
+                  type="text">
+              </p>
+              <p class=""> <label for="desc">but : </label> <textarea style="width: 800px; height: 103px;"
+cols="68"
+id="markdown"
+name="proj.description"
+rows="22"
+class="">		</textarea>
+              </p>
+              <p class=""> <label for="uneurl">Une URL : </label>
+                <input id="uneurl"
+                  name="proj.uneurl"
+                  class=""
+                  size="100"
+                  type="text">
+              </p>
+              <div class="submit"> <input id="commit" name="commit" class="btn"
+                  value="Créer"
+                  type="submit">
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- fin du panel form --> </div>
+    </div>
+    <div class="container hidden-print">
+      <hr> <a href="http://localhost:9001/public/shared/evolutions.txt"> Les
+        évolutions </a> </div>
+
+  </body>
+</html>
